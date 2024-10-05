@@ -1,0 +1,9 @@
+[package]
+name = "telem-direwolf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.38"
+sd-journal = "0.1.0"
+systemstat = "0.2.3"

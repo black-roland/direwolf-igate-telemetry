@@ -46,3 +46,11 @@ systemctl restart direwolf
 ```
 
 And it should start reporting audio level to logs and APRS.
+
+### Replacement for `telem-seq.sh`
+
+This repo also provides `telem-seq` written in Rust that can be used as a replacement for `telem-seq.sh`.
+
+```
+PBEACON sendto=IG delay=1:05 every=15:00 symbol="igate" overlay=R comment="1200bps RX only IGate" commentcmd="telem-data91.pl `/usr/local/bin/telem-seq` `/usr/local/bin/telem-direwolf`"
+```

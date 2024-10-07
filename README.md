@@ -1,6 +1,6 @@
 # Direwolf IGate Telemetry
 
-A small telemetry app for Direwolf to report temperature, load average and receive audio level to APRS.
+A small telemetry app for Direwolf to report load average, memory usage, temperature and receive audio level to APRS.
 
 ## How to build and install
 
@@ -21,9 +21,9 @@ PBEACON sendto=IG delay=1:05 every=15:00 symbol="igate" overlay=R comment="1200b
 Telemetry metadata can be configured this way:
 
 ```
-CBEACON sendto=IG delay=1:30 every=1000000 infocmd="telem-parm.pl N0CALL-10 Temp LoadAvg AudioLvl"
-CBEACON sendto=IG delay=1:31 every=1000000 infocmd="telem-unit.pl N0CALL-10 C 5m %"
-CBEACON sendto=IG delay=1:32 every=1000000 infocmd="telem-eqns.pl N0CALL-10 0 1 0 0 0.1 0"
+CBEACON sendto=IG delay=1:30 every=1000000 infocmd="telem-parm.pl N0CALL-10 LoadAvg MemUsed Temp AudioLvl"
+CBEACON sendto=IG delay=1:31 every=1000000 infocmd="telem-unit.pl N0CALL-10 5m % C ''"
+CBEACON sendto=IG delay=1:32 every=1000000 infocmd="telem-eqns.pl N0CALL-10 0 0.1 0 0 1 0 0 1 0 0 1 0"
 ```
 
 ### Audio level reporting

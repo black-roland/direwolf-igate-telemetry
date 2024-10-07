@@ -16,7 +16,7 @@ fn main() -> std::io::Result<()> {
   let mut seq_str = String::new();
   seq_file.read_to_string(&mut seq_str)?;
 
-  let new_seq = i32::from_str_radix(seq_str.trim(), 10).unwrap_or(0) + 1;
+  let new_seq = (i32::from_str_radix(seq_str.trim(), 10).unwrap_or(-1) + 1) % 100;
 
   seq_file.set_len(0)?;
   seq_file.rewind()?;

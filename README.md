@@ -8,6 +8,15 @@ Clone this repo to your APRS IGate and run `cargo build --release` to build the 
 
 Cross compilation is also supported: set up [cross](https://github.com/cross-rs/cross), run `cross build --target arm-unknown-linux-gnueabihf --release`, and copy `target/arm-unknown-linux-gnueabihf/release/telem-direwolf` to `/usr/local/bin/telem-direwolf` on your Raspberry Pi or any similar device.
 
+## How to install from binaries
+
+Also, [you can just download binaries from the release page](https://github.com/black-roland/direwolf-igate-telemetry/releases/latest). No extra dependencies are needed and you can just extract binaries to the `/usr/local/bin` directory:
+
+```console
+cd /usr/local/bin
+wget 'https://github.com/black-roland/direwolf-igate-telemetry/releases/download/v1.0.0/direwolf-igate-telemetry-1.0.0-arm-unknown-linux-gnueabihf.tar.xz' -O - | tar -x --xz
+```
+
 ## How to use
 
 ### Direwolf configuration

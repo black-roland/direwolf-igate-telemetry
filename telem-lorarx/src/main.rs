@@ -5,7 +5,7 @@
  */
 
 use systemstat::{LoadAverage, Memory, Platform, System};
-mod direwolf;
+mod lorarx;
 
 fn format_la(la: LoadAverage) -> i32 {
     (la.five * 10.0).round() as i32
@@ -24,7 +24,7 @@ fn main() {
     let mem = sys.memory().unwrap();
     let temp = sys.cpu_temp().unwrap();
 
-    let snd_lvl = direwolf::get_sound_level();
+    let qual_lvl = lorarx::get_quality_level();
 
-    println!("{} {} {} {}", format_la(la), format_mem(mem), temp.round(), snd_lvl);
+    println!("{} {} {} {}", format_la(la), format_mem(mem), temp.round(), qual_lvl);
 }

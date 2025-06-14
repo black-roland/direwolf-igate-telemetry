@@ -165,7 +165,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "telem-direwolf"
+name = "telem-lorarx"
 version = "1.0.0"
 dependencies = [
  "regex",
